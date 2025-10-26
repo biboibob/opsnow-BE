@@ -37,14 +37,15 @@ public class EmployeeController {
         service.addEmployee(emp);
     }
 
-//    @PutMapping("/{empno}")
-//    public void update(@PathVariable int empno, @RequestBody Employee emp) {
-//        emp.setEmpno(empno);
-//        service.updateEmployee(emp);
-//    }
-//
-//    @DeleteMapping("/{empno}")
-//    public void delete(@PathVariable int empno) {
-//        service.deleteEmployee(empno);
-//    }
+    @PutMapping("/{empno}")
+    public void update(@PathVariable int empno, @RequestBody Employee emp) {
+        emp.setEmpno(empno);
+        service.updateEmployee(emp);
+    }
+
+
+    @DeleteMapping("/{empno}")
+    public void delete(@PathVariable int empno) {
+        service.deleteEmployee(empno);
+    }
 }

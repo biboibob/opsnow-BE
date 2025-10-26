@@ -25,12 +25,12 @@ public class EmployeeService {
     public void addEmployee(Employee emp) {
         repo.insert(emp);
     }
-//
-//    public void updateEmployee(Employee emp) {
-//        repo.update(emp);
-//    }
-//
-//    public void deleteEmployee(int empno) {
-//        repo.delete(empno);
-//    }
+
+    public void updateEmployee(Employee emp) {
+        repo.update(emp);
+    }
+
+    public void deleteEmployee(int empno) {
+        repo.delete(empno);
+    }
 }

@@ -45,5 +45,22 @@ public class EmployeeRepository {
                 Timestamp.valueOf(e.getEntrydate()));
     }
 
+    public int update(Employee e) {
+        String sql = "UPDATE employee SET empname=?, tiercode=?, locationcode=?, departmentcode=?, supervisorcode=?, salary=? WHERE empno=?";
+        return jdbc.update(sql,
+                e.getEmpname(),
+                e.getTiercode(),
+                e.getLocationcode(),
+                e.getDepartmentcode(),
+                e.getSupervisorcode(),
+                e.getSalary(),
+                e.getEmpno());
+    }
+
+    public int delete(int empno) {
+        String sql = "DELETE FROM employee WHERE empno=?";
+        return jdbc.update(sql, empno);
+    }
+
 
 }
