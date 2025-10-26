@@ -18,13 +18,13 @@ public class EmployeeService {
         return repo.findAll();
     }
 
-//    public Employee getEmployeeById(int empno) {
-//        return repo.findById(empno);
-//    }
-//
-//    public void addEmployee(Employee emp) {
-//        repo.insert(emp);
-//    }
+    public Employee getEmployeeById(int empno) {
+        return repo.findById(empno);
+    }
+
+    public void addEmployee(Employee emp) {
+        repo.insert(emp);
+    }
 //
 //    public void updateEmployee(Employee emp) {
 //        repo.update(emp);
