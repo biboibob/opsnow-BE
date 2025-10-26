@@ -26,21 +26,18 @@ public class DepartmentController {
     }
 
     @PostMapping
-    public String create(@RequestBody Department d) {
+    public void create(@RequestBody Department d) {
         service.create(d);
-        return "Department created successfully";
     }
 
     @PutMapping("/{id}")
-    public String update(@PathVariable String id, @RequestBody Department d) {
+    public void update(@PathVariable String id, @RequestBody Department d) {
         d.setDepartmentcode(id);
         service.update(d);
-        return "Department updated successfully";
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable String id) {
+    public void delete(@PathVariable String id) {
         service.delete(id);
-        return "Department deleted successfully";
     }
 }

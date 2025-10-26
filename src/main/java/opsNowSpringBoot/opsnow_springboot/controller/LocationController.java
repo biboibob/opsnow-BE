@@ -26,21 +26,19 @@ public class LocationController {
     }
 
     @PostMapping
-    public String create(@RequestBody Location l) {
+    public void create(@RequestBody Location l) {
         service.create(l);
-        return "Location created successfully";
     }
 
     @PutMapping("/{id}")
-    public String update(@PathVariable String id, @RequestBody Location l) {
+    public void update(@PathVariable String id, @RequestBody Location l) {
         l.setLocationcode(id);
         service.update(l);
-        return "Location updated successfully";
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable String id) {
+    public void delete(@PathVariable String id) {
         service.delete(id);
-        return "Location deleted successfully";
+
     }
 }
